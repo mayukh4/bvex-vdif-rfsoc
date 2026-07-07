@@ -1,0 +1,31 @@
+# --- site config (holds your real IPs/MAC; never commit) ---
+host/config.py
+
+# --- recorder build products ---
+host/vdif_recorder
+host/vdif_gen
+host/*.o
+host/xsk_redirect.bpf.o
+host/xdpbuild/
+
+# --- recorded data + status files (large; belongs on the NVMe SSDs, not in git) ---
+*.vdif
+*.vdif.json
+!analysis/sample/haystack_test.vdif
+/run/vdif_*.json
+vdif_*_status.json
+
+# --- python / editor / OS junk ---
+__pycache__/
+*.pyc
+venv/
+.venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# --- firmware build scratch (if you rebuild in-tree) ---
+firmware/*/.Xil/
+firmware/*/sysgen/
+firmware/*/outputs/
+*.jou
+*.log
