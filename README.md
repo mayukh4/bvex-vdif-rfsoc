@@ -1,6 +1,6 @@
 # bvex-vdif-rfsoc
 
-RFSoC 4x2 VDIF packetizer and no-drop recorder for the mmBVEX millimeter-wave VLBI experiment.
+RFSoC 4x2 VDIF packetizer and no-drop recorder for the mmBVEX millimeter-wave VLBI experiment. This is built on top of the design https://github.com/jkocz/vdif_misc. 
 
 The RFSoC digitizes a 2-4 GHz IF, requantizes it to 2-bit complex (Van Vleck optimal), frames it as
 VDIF, and streams it over 100GbE as a single UDP flow. A C recorder using AF_XDP kernel-bypass writes
