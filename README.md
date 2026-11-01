@@ -193,6 +193,12 @@ Vleck histograms (target 16.4 / 33.6 / 33.6 / 16.4 percent), and computes the ba
 `gen_vex.py` writes a `.vex` / `.v2d` / filelist (`format=VDIF/8032/2`), `run_mpifx.sh` launches
 `mpifxcorr`, and `parse_difx.py` reads the SWIN output.
 
+Result (1 July 2026, DiFX 2.8.1): a 3 s hardware recording registered as two stations 1 m apart gives a
+zero-baseline correlation coefficient of 0.985, recovers the 2.93 ns CALC-11 model delay to within 0.4 ps,
+and leaves a residual phase of 0.078 degrees rms after the fitted delay is removed. The plots and the
+decode checks are in [`docs/difx_zero_baseline.md`](docs/difx_zero_baseline.md). This is a consistency test
+on one recording, not a fringe between two telescopes.
+
 ## Firmware
 
 The compiled bitstream in `firmware/bitstream/` runs as-is; rebuilding is only needed to change the
